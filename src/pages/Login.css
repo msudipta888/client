@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.spinner{
+  color: rgb(60, 255, 0);
+  height: 50px;
+  width: 55px;
+  animation:spin infinite 5s linear;
+}
+@keyframes spin{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+.login {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #333;
+  width: 350px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.notification-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 270px;
+  background-color: #f8d7da; 
+  color: #721c24; 
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fade-out 3.5s forwards; 
+}
+
+.message {
+  margin-bottom: 5px;
+}
+
+.progress-bar {
+  height: 5px;
+  background-color: #721c24; 
+  animation: progress 3s linear forwards; 
+}
+
+@keyframes progress {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 270px;
+    
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+.login:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.login h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.login input {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 25px;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.login input:focus {
+  outline: none;
+  border-color: #4ca1af;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login .btn {
+  background: #4ca1af;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease, transform 0.3s;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.login .btn:hover {
+  background: #3b8d99;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+}
+
+.login .email, .login .password {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 25px;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.login .email:hover, .login .password:hover {
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login {
+  animation: fadeIn 1s ease-in-out;
+}

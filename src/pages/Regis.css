@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+ /* background : linear-gradient(135deg, #00c6ff, #0072ff); */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  color: #121111;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.spin{
+  color: rgb(29, 30, 28);
+  height: 50px;
+  width: 55px;
+  animation:spin infinite 5s linear;
+}
+@keyframes spin{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+.box h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.box input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 25px;
+  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.box input:focus {
+  outline: none;
+  box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.box .btn {
+  background: linear-gradient(145deg, #6e8efb, #a777e3);
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.box .btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.box .name, .box .email, .box .password {
+  width: 90%;
+  padding: 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 25px;
+  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.box .name:hover, .box .email:hover, .box .password:hover {
+  transform: translateY(-5px);
+  box-shadow: inset 0 7px 15px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.box .name:focus, .box .email:focus, .box .password:focus {
+  outline: none;
+  box-shadow: inset 0 7px 20px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.5);
+}
